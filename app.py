@@ -1,9 +1,11 @@
+""" app module"""
 from flask import Flask
-from config import Configuration
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from flask_migrate import Migrate
 from flask_jwt_extended import JWTManager
+from config import Configuration
+
 
 app = Flask(__name__)
 app.config.from_object(Configuration)
