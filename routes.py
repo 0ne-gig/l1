@@ -5,7 +5,7 @@ from flask import request, jsonify, send_from_directory
 from werkzeug.utils import secure_filename
 from flask_jwt_extended import jwt_required, current_user, set_access_cookies
 from models import User, Task
-from app import app, jwt
+from app import app, jwt, container
 
 
 UPLOAD_FOLDER = '/upload_folder'
@@ -175,3 +175,11 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 ###
+
+# ОКРУЖЕНИЕ
+
+
+@app.route("/health", methods=['GET'])
+def health():
+    """routes method"""
+    return container.get_env()
