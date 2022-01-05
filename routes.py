@@ -5,7 +5,7 @@ from flask import request, jsonify, send_from_directory
 from werkzeug.utils import secure_filename
 from flask_jwt_extended import jwt_required, current_user, set_access_cookies
 from models import User, Task
-from app import app, jwt, container
+from app import app, jwt
 
 
 UPLOAD_FOLDER = '/upload_folder'
