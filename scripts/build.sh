@@ -1,5 +1,5 @@
 git pull origin master
-ls
+ls -la
 sh .env/bin/activate
 which pip
 # ls
