@@ -1,4 +1,5 @@
 git pull origin master
-sh .env/bin/activate
 ls
-pip list
+# sh .env/bin/activate
+# ls
+# pip list
