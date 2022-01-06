@@ -1,6 +1,6 @@
 git pull origin master
 ls -la
-sh .env/bin/activate
+source .env/bin/activate
 which pip
 # ls
 # pip list
