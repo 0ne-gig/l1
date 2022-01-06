@@ -5,4 +5,4 @@ git add -A
 git commit -m "deploy dev"
 git push origin master
 cd scripts
-ssh doi 'cd lab1 && ls'
+ssh doi 'cd lab1 && git pull origin master'
